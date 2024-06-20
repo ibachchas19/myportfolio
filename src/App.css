@@ -1,4 +1,4 @@
-/* custom fonts */
+custom fonts
 @font-face {
   font-family: centra;
   src: url(./fonts/CentraNo2-Bold.ttf);
@@ -16,6 +16,9 @@
 }
 
 /* Default css  */
+.card-text {
+  color: #d3d3d3; /* Light gray text */
+}
 *{
   margin: 0;
   padding: 0;

@@ -47,7 +47,7 @@ export const Banner = () =>{
                     <Col xs={12} md={6} xl={7}>
                     <TrackVisibility>
                     {({isVisible})=>
-                    <div className={isVisible ? "animated__animated animated__fadeIn" :""}>
+                    <div className={isVisible ? "animate__animated animate__bounce" :""}>
                     <span className="tagline">
                         Welcome to My Portfolio!
                     </span>

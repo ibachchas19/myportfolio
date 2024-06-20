@@ -29,7 +29,7 @@ export const NavBar=()=>{
         <Navbar collapseOnSelect expand="lg" className={scrolled ? "scrrolled": ""}>
       <Container>
         <Navbar.Brand href="#home">
-            <img src={logo} alt="logo" />
+            {/* <img src={logo} alt="logo" /> */}Ishant 
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav">
             <span className="navbar-toggler-icon"></span>
