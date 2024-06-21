@@ -1,7 +1,8 @@
-custom fonts
+/* custom fonts */
+
 @font-face {
   font-family: centra;
-  src: url(./fonts/CentraNo2-Bold.ttf);
+  src:url(./fonts/CentraNo2-Bold.ttf);
   font-weight: 700;
 }
 @font-face {
@@ -27,6 +28,7 @@ custom fonts
 html{
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
+  overflow: auto;
 }
 body{
   font-weight: 400;

@@ -27,7 +27,7 @@ export const NavBar=()=>{
     }
     return(
         <Navbar collapseOnSelect expand="lg" className={scrolled ? "scrrolled": ""}>
-      <Container>
+      <Container fluid>
         <Navbar.Brand href="#home">
             {/* <img src={logo} alt="logo" /> */}Ishant 
         </Navbar.Brand>

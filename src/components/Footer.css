@@ -28,6 +28,8 @@
     z-index: 0px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
 }
 .new-email-bx::before{
@@ -75,6 +77,36 @@
     width: 26px;
 }
 .footer p{
+    font-weight: 400;
+    font-size: 14px;
+    color: #b8b8b8;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+
+
+
+@media (max-width: 600px) {
+    .newsletter-bx {
+        padding: 50px 20px;
+        margin-top: -50px;
+    }
+    .new-email-bx {
+        flex-direction: column;
+    }
+    .new-email-bx input {
+        margin-bottom: 10px;
+    }
+    .new-email-bx button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+.footer img {
+    width: 26px;
+}
+.footer p {
     font-weight: 400;
     font-size: 14px;
     color: #b8b8b8;
