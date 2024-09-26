@@ -76,6 +76,9 @@
     overflow: hidden;
     margin-bottom: 24px;
   }
+  .background-image-right{
+    width: 100%;
+  }
   .proj-imgbx::before {
     content: "";
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
