@@ -20,27 +20,27 @@ export const Projects = () => {
       imgUrl: projImg4,
     },
     {
-      title: "Business Startup",
+      title: "Tour & Travels",
       description: "Design & Development",
       imgUrl: projImg5,
     },
     {
-      title: "Business Startup",
+      title: "Landing Pages",
       description: "Design & Development",
       imgUrl: projImg6,
     },
     {
-      title: "Business Startup",
+      title: "Security Agency",
       description: "Design & Development",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
+      title: "Blogs",
       description: "Design & Development",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
+      title: "E-Commerce",
       description: "Design & Development",
       imgUrl: projImg3,
     },
