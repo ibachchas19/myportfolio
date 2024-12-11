@@ -1,103 +1,91 @@
-  import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-  import { ProjectCard } from "./ProjectCard";
-  import projImg1 from "../img/project-img1.png";
-  import projImg2 from "../img/project-img2.png";
-  import projImg3 from "../img/project-img3.png";
-  import projImg4 from '../img/project_img4.png';
-  import projImg5 from '../img/project_img5.svg';
-  import projImg6 from '../img/project_img6.png';
-  import colorSharp2 from "../img/color-sharp2.png";
-  import 'animate.css';
-  import "./Projects.css";
+import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { ProjectCard } from "./ProjectCard";
+import projImg1 from "../img/dsa-project-1.png";
+import projImg2 from "../img/dsp-project-2.png";
+import projImg3 from "../img/ds-project-3.png";
+import projImg4 from "../img/security-project-4.png";
+import projImg5 from "../img/forgewebs-project-5.png";
+import projImg6 from "../img/furryFacts-project-6.png";
+import projImg7 from "../img/ilights-project-7.png";
+import projImg8 from "../img/shoes-project-8.png";
+import projImg9 from "../img/doprepare-project-9.png";
+import projImg10 from "../img/analytix-project-10.png";
+import projImg11 from "../img/blog-project-11.png";
+import projImg12 from "../img/analytical-project-12.png";
+import projImg13 from "../img/brainalyst-project-13.png";
+import colorSharp2 from "../img/color-sharp2.png";
+import 'animate.css';
+import "./Projects.css";
 import TrackVisibility from 'react-on-screen';
 
-export const Projects = () => {
+// Utility function to split the projects array into groups of 6
+const splitIntoChunks = (array, chunkSize) => {
+  const chunks = [];
+  for (let i = 0; i < array.length; i += chunkSize) {
+    chunks.push(array.slice(i, i + chunkSize));
+  }
+  return chunks;
+};
 
+export const Projects = () => {
   const projects = [
-    {
-      title: "Educational Website",
-      description: "Design & Development Using React.js,Bootstrap,Python and Flask ",
-      imgUrl: projImg4,
-    },
-    {
-      title: "Tour & Travels",
-      description: "Design & Development",
-      imgUrl: projImg5,
-    },
-    {
-      title: "Landing Pages",
-      description: "Design & Development",
-      imgUrl: projImg6,
-    },
-    {
-      title: "Security Agency",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Blogs",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "E-Commerce",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+    { title: "E-Commerce", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma, and Bootstrap", imgUrl: projImg7 },
+    { title: "Start-Up ", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg5 },
+    { title: "Educational", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma,Razorpay and Bootstrap", imgUrl: projImg10 },
+    { title: "Security Agency", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg4 },
+    { title: "Blog", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma,Razorpay and Bootstrap", imgUrl: projImg11 },
+    { title: "Landing Page", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg1 },
+    { title: "Start-Up ", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma, and Bootstrap", imgUrl: projImg9 },
+    { title: "Educational", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma,Razorpay and Bootstrap", imgUrl: projImg13 },
+    { title: "Landing Pages", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg2 },
+    { title: "Landing Pages", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg3 },
+    { title: "Start-Up", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg8 },
+    { title: "Fun Site", description: "Design & Development Using React.js, Spline, and Bootstrap", imgUrl: projImg6 },
+    { title: "Educational", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma,Razorpay and Bootstrap", imgUrl: projImg12 },
   ];
+
+  const projectGroups = splitIntoChunks(projects, 6);
 
   return (
     <section className="project" id="projects">
       <Container>
         <Row>
           <Col size={12}>
-          <TrackVisibility>
-                    {({isVisible})=>
-                    <div className={isVisible ? "animate__animated animate__bounce" :""}>
-                <h2>Projects</h2>
-                <p>Designed and developed a personal portfolio website to showcase projects and skills. Focused on creating a visually appealing and user-friendly interface.
-                Technologies Used: HTML, CSS, JavaScript, Bootstrap,Git/GitHub.</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                  <Tab.Content>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                              key={index}
-                              {...project}
-                              />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                      <p>Nothing To Show Wait For Ishant to Add New Projects Thank-You For Visting Tab-2</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Nothing To Show Wait For Ishant to Add New Projects Thank-You For Visting Tab-3</p>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-                          </div>}
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div className={isVisible ? "animate__animated animate__bounce" : ""}>
+                  <h2>Projects</h2>
+                  <p>
+                    I have Designed and developed a personal portfolio website to showcase projects and skills. Focused on creating a visually appealing, user-friendly interface and user-experience . <br />
+                    Technologies Used: HTML, CSS, JavaScript,React.js,Python-Flask,Mysql,Postman,Bootstrap,Figma,Google Tag,Razorpay,Shiprocket and Git/GitHub.
+                  </p>
+                  <Tab.Container id="projects-tabs" defaultActiveKey="tab-0">
+                    <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                      {projectGroups.map((_, index) => (
+                        <Nav.Item key={index}>
+                          <Nav.Link eventKey={`tab-${index}`}>Tab {index + 1}</Nav.Link>
+                        </Nav.Item>
+                      ))}
+                    </Nav>
+                    <Tab.Content>
+                      {projectGroups.map((group, index) => (
+                        <Tab.Pane eventKey={`tab-${index}`} key={index}>
+                          <Row>
+                            {group.map((project, idx) => (
+                              <ProjectCard key={idx} {...project} />
+                            ))}
+                          </Row>
+                        </Tab.Pane>
+                      ))}
+                    </Tab.Content>
+                  </Tab.Container>
+                </div>
+              )}
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="bg-img"></img>
+      <img className="background-image-right" src={colorSharp2} alt="bg-img" />
     </section>
-  )
-}
+  );
+};

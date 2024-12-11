@@ -1,5 +1,5 @@
 import {Container,Row,Col} from "react-bootstrap";
-import logo from "../img/logo.svg"
+import logo from "../img/i_logo-removebg-preview.png"
 import navicon1 from '../img/nav-icon1.svg';
 import navicon2 from '../img/nav-icon2.svg';
 import navicon3 from '../img/nav-icon3.svg';
@@ -14,7 +14,7 @@ export const Footer = () => {
           <Row className="align-items-center">
             <MailchimpForm />
             <Col size={12} sm={6}>
-              {/* <img src={logo} alt="Logo" /> */} <h2>My Portfolio</h2> 
+            <div> <h2><img src={logo} alt="logo" width="60px" className="footer-logo" /> My Portfolio</h2> </div>
             </Col>
             <Col size={12} sm={6} className="text-center text-sm-end">
               <div className="social-icon">

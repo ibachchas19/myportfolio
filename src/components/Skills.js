@@ -43,27 +43,43 @@ return(
                     </p>
                     <Carousel responsive={responsive} infinite={true} className="skill-slider">
                         <div className="items">
-                            <img src={meter1} alt="Image" />
+                            <img src={meter1} alt="skill-img" />
                             <h5>HTML</h5>
                         </div>
                         <div className="items">
-                            <img src={meter2} alt="Image" />
+                            <img src={meter2} alt="skill-img" />
                             <h5>REACT.JS</h5>
                         </div>
                         <div className="items">
-                            <img src={meter3} alt="Image" />
+                            <img src={meter3} alt="skill-img" />
                             <h5>JAVA SCRIPT</h5>
                         </div>
                         <div className="items">
-                            <img src={meter1} alt="Image" />
+                            <img src={meter1} alt="skill-img" />
                             <h5>CSS</h5>
+                        </div>
+                        <div className="items">
+                            <img src={meter2} alt="skill-img" />
+                            <h5>Python-Flask</h5>
+                        </div>
+                        <div className="items">
+                            <img src={meter1} alt="skill-img" />
+                            <h5>Figma</h5>
+                        </div>
+                        <div className="items">
+                            <img src={meter1} alt="skill-img" />
+                            <h5>Bootstrap</h5>
+                        </div>
+                        <div className="items">
+                            <img src={meter1} alt="skill-img" />
+                            <h5>Mysql</h5>
                         </div>
                     </Carousel>
                 </div>
                 </Col>
             </Row>
         </Container>
-        <img className="background-image-left" src={colorSharp} alt="image" />
+        <img className="background-image-left" src={colorSharp} alt="bg-img-skill" />
     </section>
 )    
 }
