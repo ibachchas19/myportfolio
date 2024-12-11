@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React,{ useEffect } from 'react';
+import {NavBar} from './components/Navbar'
+import { Banner } from './components/Banner';
+import { Skills} from './components/Skills'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Projects } from './components/Projects';
+import { Contact } from './components/Contact';
+import {Footer} from './components/Footer'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { CTA } from './components/Cta';
+import { PopupForm } from './components/Popup';
 
 function App() {
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+   
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      <Banner/>
+      <Skills/>    
+      <CTA/> 
+      <PopupForm/>
+      <Projects/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,37 @@
+.cta {
+    background: linear-gradient(90deg, #4A2FBD 0%, #AA367C 100%);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .cta-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .cta-title .highlight {
+    color: #ffd700; /* Gold-like highlight for emphasis */
+  }
+  
+  .cta-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 12px 32px;
+    border-radius: 30px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #121212;
+    color: #fff;
+  }
+  
