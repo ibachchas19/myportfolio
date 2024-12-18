@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Navbar,Container,Nav } from "react-bootstrap"
 import './Navbar.css'
 import logo from '../img/i_logo-removebg-preview.png';
+import { Link } from "react-router-dom";
 import navicon1 from '../img/nav-icon1.svg';
 import navicon2 from '../img/nav-icon2.svg';
 import navicon3 from '../img/nav-icon3.svg';
@@ -36,9 +37,10 @@ export const NavBar=()=>{
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="custom-left-margin">
-            <Nav.Link href="#home"className={activeLink==='home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdatedActiveLink("home")}>Home</Nav.Link>
-            <Nav.Link href="#skills"className={activeLink==='skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdatedActiveLink("skills")}>Skills</Nav.Link>
-            <Nav.Link href="#projects"className={activeLink==='projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdatedActiveLink("projects")}>Projects</Nav.Link>
+            <Nav.Link as={Link} to="/"className={activeLink==='home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdatedActiveLink("home")}>Home</Nav.Link>
+            <Nav.Link as={Link} to="Projects"className={activeLink==='projects' ? 'active navbar-link' : 'navbar-link'}>Projects</Nav.Link>
+            {/* <Nav.Link as={Link} to="/contact" className={activeLink==='contact' ? 'active navbar-link' : 'navbar-link'}>Contact</Nav.Link> */}
+            <Nav.Link as={Link} to="privacy-policy"className={activeLink==='privacy-policy' ? 'active navbar-link' : 'navbar-link'}>Privacy Policy</Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
@@ -47,7 +49,7 @@ export const NavBar=()=>{
                 <a href="https://www.instagram.com/the_ishant_bachchas?igsh=MTFoaWhjaDhldDNmcQ=="><img src={navicon3} alt="" /></a>
             </div>
                           
-            <button className="vvd" onClick={()=> document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}><span>Lets Connect</span></button>
+            <Link as={Link} to="/contact"><button className="vvd"><span>Lets Connect</span></button></Link>
             
           </span>
      </Navbar.Collapse>

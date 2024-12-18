@@ -29,25 +29,25 @@ const splitIntoChunks = (array, chunkSize) => {
 
 export const Projects = () => {
   const projects = [
-    { title: "E-Commerce", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma, and Bootstrap", imgUrl: projImg7 },
-    { title: "Start-Up ", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg5 },
-    { title: "Educational", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma,Razorpay and Bootstrap", imgUrl: projImg10 },
-    { title: "Security Agency", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg4 },
-    { title: "Blog", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma,Razorpay and Bootstrap", imgUrl: projImg11 },
-    { title: "Landing Page", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg1 },
-    { title: "Start-Up ", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma, and Bootstrap", imgUrl: projImg9 },
-    { title: "Educational", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma,Razorpay and Bootstrap", imgUrl: projImg13 },
-    { title: "Landing Pages", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg2 },
-    { title: "Landing Pages", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg3 },
-    { title: "Start-Up", description: "Design & Development Using React.js and Bootstrap", imgUrl: projImg8 },
-    { title: "Fun Site", description: "Design & Development Using React.js, Spline, and Bootstrap", imgUrl: projImg6 },
-    { title: "Educational", description: "Design & Development Using React.js, Python-Flask, MySQL, Figma,Razorpay and Bootstrap", imgUrl: projImg12 },
+    { title: "E-Commerce", description: "Design & Development", imgUrl: projImg7 },
+    { title: "Start-Up ", description: "Design & Development", imgUrl: projImg5 },
+    { title: "Educational", description: "Design & Development", imgUrl: projImg10 },
+    { title: "Security Agency", description: "Design & Development", imgUrl: projImg4 },
+    { title: "Blog", description: "Design & Development", imgUrl: projImg11 },
+    { title: "Landing Page", description: "Design & Development", imgUrl: projImg1 },
+    { title: "Start-Up ", description: "Design & Development", imgUrl: projImg9 },
+    { title: "Educational", description: "Design & Development", imgUrl: projImg13 },
+    { title: "Landing Pages", description: "Design & Development ", imgUrl: projImg2 },
+    { title: "Landing Pages", description: "Design & Development ", imgUrl: projImg3 },
+    { title: "Start-Up", description: "Design & Development ", imgUrl: projImg8 },
+    { title: "Fun Site", description: "Design & Development ", imgUrl: projImg6 },
+    { title: "Educational", description: "Design & Development", imgUrl: projImg12 },
   ];
 
   const projectGroups = splitIntoChunks(projects, 6);
 
   return (
-    <section className="project" id="projects">
+    <section className="project " id="projects" >
       <Container>
         <Row>
           <Col size={12}>
