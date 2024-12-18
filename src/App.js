@@ -1,17 +1,17 @@
 
 import './App.css';
 import React,{ useEffect } from 'react';
+import { BrowserRouter as Router, Route,Routes} from "react-router-dom";
 import {NavBar} from './components/Navbar'
-import { Banner } from './components/Banner';
-import { Skills} from './components/Skills'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Projects } from './components/Projects';
-import { Contact } from './components/Contact';
 import {Footer} from './components/Footer'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { CTA } from './components/Cta';
 import { PopupForm } from './components/Popup';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import Homepage from './pages/Homepage';
+import ContactPage from './pages/ContactPage';
+import ProjectPage from './pages/ProjectPage';
 
 function App() {
   
@@ -22,16 +22,19 @@ function App() {
   }, []);
    
   return (
-    <div className="App">
+    <Router>
+    <div className="App">    
       <NavBar/>
-      <Banner/>
-      <Skills/>    
-      <CTA/> 
-      <PopupForm/>
-      <Projects/>
-      <Contact/>
+      <PopupForm/> 
+      <Routes>
+      <Route path="/" element={<Homepage/>}/>   
+      <Route path='/projects' element={<ProjectPage/>}/>
+      <Route path='/contact' element={<ContactPage/>}/>
+      <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>      
+      </Routes>      
       <Footer/>
     </div>
+    </Router>
   );
 }
 

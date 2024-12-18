@@ -17,8 +17,11 @@
 }
 
 /* Default css  */
+ul li{
+  list-style: none;
+}
 .card-text {
-  color: #d3d3d3; /* Light gray text */
+  color: #d3d3d3; 
 }
 *{
   margin: 0;

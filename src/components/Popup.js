@@ -5,29 +5,34 @@ import "./PopupForm.css";
 
 export const PopupForm = () => {
   const [show, setShow] = useState(false);
-  const [popupCount, setPopupCount] = useState(0); 
+  const [hasScrolled, setHasScrolled] = useState(false); // To track if the popup has been shown
   const formRef = useRef();
 
-  // Timer logic for multiple popups
   useEffect(() => {
-    const popupTimers = [
-      setTimeout(() => setShow(true), 5000), // Show popup after 5 seconds
-      setTimeout(() => {
-        if (popupCount === 1) setShow(true); // Show second popup after 20 seconds
-      }, 25000),
-      setTimeout(() => {
-        if (popupCount === 2) setShow(true); // Show third popup after 30 seconds
-      }, 55000),
-    ];
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY; // Vertical scroll position
+      const windowHeight = window.innerHeight; // Height of the visible window
+      const documentHeight = document.documentElement.scrollHeight; // Total height of the document
+
+      // Calculate scroll percentage
+      const scrollPercentage = (scrollPosition + windowHeight) / documentHeight;
+
+      // Show popup if user has scrolled 50% and it hasn't been shown yet
+      if (scrollPercentage >= 0.5 && !hasScrolled) {
+        setShow(true);
+        setHasScrolled(true); // Ensure popup is shown only once
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      popupTimers.forEach((timer) => clearTimeout(timer)); // Cleanup on unmount
+      window.removeEventListener("scroll", handleScroll); 
     };
-  }, [popupCount]);
+  }, [hasScrolled]);
 
   const handleClose = () => {
     setShow(false);
-    setPopupCount((prevCount) => prevCount + 1); // Increment popup count when closed
   };
 
   const handleSubmit = async (e) => {
